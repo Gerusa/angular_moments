@@ -1,7 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 //importacao do formGroup... esta sendo usado no html
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+//importacao da interface
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-moment-form',
@@ -11,6 +14,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class MomentFormComponent implements OnInit {
   // o exclamacao diz que pode nao existir
   @Input() btnText!:string;
+
+  // o que eh compartilhado com outro componente
+  @Output() onSubmit = new EventEmitter<Moment>()
 
   momentForm!: FormGroup;
 
@@ -44,7 +50,11 @@ export class MomentFormComponent implements OnInit {
     if(this.momentForm.invalid) {
       return;
     }
+
     console.log('Enviou formulário: ', this.momentForm.value);
+
+    //esta enviando os dados do formulario para outro componente
+    this.onSubmit.emit(this.momentForm.value);
   }
 
 }
