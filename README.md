@@ -4,6 +4,10 @@
 
 * Repositório do Matheus com o conteúdo do curso: https://github.com/matheusbattisti/curso_angular_yt/tree/19_projeto_moments
 
+###
+
+* Instalação de pacote de ícones: 'ng add @fortawesome/angular-fontawesome'
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
