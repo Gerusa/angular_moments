@@ -4,6 +4,8 @@
 
 * Repositório do Matheus com o conteúdo do curso: https://github.com/matheusbattisti/curso_angular_yt/tree/19_projeto_moments
 
+* Este projeto usa um outro projeto em AdonisJS como sendo o bak (back_projeto_angular)
+
 ###
 
 * Instalação de pacote de ícones: 'ng add @fortawesome/angular-fontawesome'
