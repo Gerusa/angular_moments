@@ -24,6 +24,9 @@ export class HomeComponent implements OnInit {
 
   baseApiUrl = environment.baseApiUrl;
 
+  faSearch = faSearch;
+  searchTerm: string = '';
+
   constructor(private momentService: MomentService) { }
 
   ngOnInit(): void {
@@ -39,6 +42,14 @@ export class HomeComponent implements OnInit {
       this.allMoments = data;
       this.moments = data;
     });
+  }
+
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.moments = this.allMoments.filter(moment =>
+      moment.title.toLowerCase().includes(value));
   }
 
 }
