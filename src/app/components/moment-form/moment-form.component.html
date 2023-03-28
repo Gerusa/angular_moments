@@ -3,6 +3,7 @@
 formControlName -> da um nome ao atributo no formulario (get no arquivo .ts)
 criacao da 'div' de validacao -->
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
+    <input type="hidden" formControlName="id" />
     <div class="form-group">
         <label for="title">Título:</label>
         <input type="text" placeholder="Informe um título"
