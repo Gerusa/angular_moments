@@ -39,8 +39,8 @@ export class HomeComponent implements OnInit {
         item.created_at = new Date(item.created_at!).toLocaleDateString('pt-BR');
       });
 
-      this.allMoments = data;
-      this.moments = data;
+      this.allMoments = items.data;
+      this.moments = items.data;
     });
   }
 
